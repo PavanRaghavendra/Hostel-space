@@ -9,7 +9,7 @@ const StudentSchema=new mongoose.Schema(
             max:50,
             required:true,
         },
-        Student_Gender:
+        student_Gender:
         {
             type:String,
             required:true
