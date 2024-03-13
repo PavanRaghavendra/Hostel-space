@@ -1,7 +1,17 @@
 import mongoose from 'mongoose';
-mongoose.connect("");
+mongoose.connect("mongodb://localhost:27017/Hostel");
 const StudentSchema=new mongoose.Schema(
     {
+        student_mail:
+        {
+            type:String,
+            requried:true
+        },
+        student_password:
+        {
+            type:String,
+            require:true
+        },
         student_name:
         {
             type:String,
@@ -9,14 +19,14 @@ const StudentSchema=new mongoose.Schema(
             max:50,
             required:true,
         },
-        Student_Gender:
+        student_Gender:
         {
             type:String,
             required:true
         },
         Date_of_brith:
         {
-            type:Date,
+            type:String,
             required:true
         },
         contact_info:
@@ -38,12 +48,12 @@ const StudentSchema=new mongoose.Schema(
             },
             district:
             {
-                type:Number,
+                type:String,
                 required:true,
             },
             State:
             {
-                type:Number,
+                type:String,
                 required:true,
             }
         },
